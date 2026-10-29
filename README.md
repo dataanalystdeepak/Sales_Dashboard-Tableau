@@ -1,66 +1,98 @@
+# 💰 Sales Dashboard 2023 | Tableau
 
-# 📊 Sales Dashboard | 2023  
+An interactive **Tableau dashboard** for **comparative sales analysis: Current Year (CY) vs Previous Year (PY)**. The user can **pick any year as the Current Year**, and the dashboard compares it with the year before. It tracks total sales, profit and quantity sold, shows which product sub-categories perform best, and highlights weekly sales and profit trends.
 
-A dynamic and interactive Sales Dashboard built to analyze business performance across multiple dimensions. This dashboard provides comparative insights between the Current Year (CY) and Previous Year (PY), with the flexibility to select any year as the baseline.
-
-🔗 **Live Dashboard:** [View on Tableau Public](https://public.tableau.com/views/ComparativePerformance-SalesDashboard/SalesDashboard?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
-
----
-
-## 🚀 Features  
-
-1. Comparative Analysis  
-   - Automatically calculates PY metrics based on the selected CY.  
-   - Tracks growth percentages for Sales, Profit, and Quantity.  
-
-2. Filters for Deep Dive  
-   - Category  
-   - Sub-Category  
-   - Region  
-   - State  
-   - City  
-
-3. Navigation  
-   - One-click button to switch to the Customer Dashboard for customer-level insights.  
+**Live Dashboard:** [View on Tableau Public](https://public.tableau.com/views/ComparativePerformance-SalesDashboard/SalesDashboard?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ---
 
-## 📈 Key Metrics  
+## 📌 Project Objective
 
-1. **Total Sales:** ₹733K ▲20.36% vs PY  
-2. Min and Max values are calculated and visually highlighted in the line chart.  
-3. **Total Profit:** ₹286K ▲14.24% vs PY  
-4. Min and Max values are calculated and visually highlighted in the line chart.  
-5. **Total Quantity:** 37,873 ▲26.83% vs PY  
-6. Min and Max values are calculated and visually highlighted in the line chart.  
-
----
-
-## 🔑 Key Insights  
-
-1. **Strong Growth:** Sales, profit, and quantity all show double-digit growth compared to the previous year.  
-2. **Category Performance:** High contribution from Copiers, Chairs, and Phones in both sales and profit.  
-3. Some categories like Tables and Bookcases show weaker profitability despite sales volume.  
-4. **Regional Trends:** Filters allow identification of top-performing regions and states, helping spot geographic opportunities.  
-5. **Weekly Fluctuations:** Average weekly sales hover around ₹14K, with peaks highlighted in the chart.  
-6. Weekly profit averages ₹2K, with min/max points clearly marked.  
+- Compare sales performance between the Current Year and the Previous Year
+- Let users choose any year as the Current Year for a flexible comparison
+- Track total sales, profit and quantity along with their growth vs PY
+- Find which product sub-categories bring the most sales and profit, and which ones lose money
+- Understand weekly sales and profit patterns across the year
 
 ---
 
-## 🛠️ Tech Stack  
+## 📊 Dashboard Components
 
-1. **Data Source:** Business transaction dataset (structured by order date, category, region, etc.)  
-2. **Visualization Tool:** Power BI / Tableau  
-3. **Interactivity:** Filters, slicers, and navigation buttons for seamless exploration  
-4. **Design Elements:** Line charts with min/max markers, bar charts for category comparisons, and weekly trend analysis  
+| Component | What it shows |
+|---|---|
+| **Year Selection** | User picks any year as the Current Year (CY); it is compared with the Previous Year (PY) |
+| **Total Sales** | Total sales for the selected year, % change vs PY, and a monthly CY vs PY trend line |
+| **Total Profit** | Total profit for the selected year, % change vs PY, and a monthly CY vs PY trend line |
+| **Total Quantity** | Total quantity sold, % change vs PY, and a monthly CY vs PY trend line |
+| **Sales & Profit by Sub-Category** | Bar chart comparing PY and CY sales for each sub-category, next to a CY profit chart (colour shows profit level, loss-making sub-categories fall below zero) |
+| **Weekly Trends** | Weekly sales and profit for the year with average reference lines |
+| **Navigation Button** | Button linking to the companion **Customer Dashboard** |
 
 ---
 
-## 📌 Use Cases  
+## 🔢 Key Metrics (Current Year selected: 2023)
 
-1. **Performance Tracking:** Monitor year-over-year growth in sales, profit, and quantity.  
-2. **Category Analysis:** Identify top-performing and underperforming sub-categories.  
-3. **Regional Insights:** Compare performance across regions, states, and cities.  
-4. **Trend Monitoring:** Spot seasonal or weekly fluctuations in demand and profitability.  
-5. **Customer Analysis:** Drill down into customer-level dashboards for detailed buying behavior.  
-6. **Decision Support:** Provide actionable insights for sales strategy, inventory planning, and marketing focus.  
+| Metric | Value | vs Previous Year |
+|---|---|---|
+| Total Sales | **₹733K** | ▲ 20.36% |
+| Total Profit | **₹286K** | ▲ 14.24% |
+| Total Quantity | **37,873** | ▲ 26.83% |
+| Profit Margin (Profit ÷ Sales) | **~39%** | Slightly lower than PY (~41%)* |
+
+---
+
+## 💡 Key Insights
+
+### 1. Strong overall growth
+- Sales grew **20.36%**, profit grew **14.24%** and quantity sold grew **26.83%** compared to the previous year.
+- **Quantity is growing faster than sales, and sales faster than profit.** This means the business is selling more units, but profit per unit is under some pressure, and the profit margin dipped slightly.
+
+### 2. Seasonal pattern
+- **Sales and quantity were lowest around February** and highest around **November**, so the second half of the year is much stronger than the start.
+- **Profit peaked around March and was lowest around April**, which means profit does not always follow sales month by month.
+
+### 3. Sub-category performance
+- **Phones** are among the biggest sales contributors, and **Chairs, Binders and Storage** also bring high sales.
+- **Copiers** give the **highest profit** of all sub-categories, even though their sales are lower than Phones.
+- **Tables** have high sales but are the biggest **loss-making** sub-category in CY, a clear case where heavy sales do not mean profit.
+- A few other sub-categories (such as **Machines, Bookcases and Supplies**) show small losses or very low profit.
+- Action idea: review pricing and discounts on Tables and other loss-making products, and push high-margin sub-categories like Copiers and Phones.
+
+### 4. Weekly trends
+- Weekly sales average around **₹14K**, with the highest weeks coming in the **last part of the year (roughly weeks 40 to 50)**.
+- Weekly profit is mostly steady, with one big spike around **week 12 to 13** and a few weeks where profit drops below zero.
+
+---
+
+## 🛠️ Tools & Skills Used
+
+- **Tableau** (Desktop / Public): dashboard design, calculated fields and parameters
+- Current Year vs Previous Year comparison with a user-selectable year
+- KPI cards with % change vs PY and trend (sparkline) charts
+- Bar charts with a dual-axis layout for sales and profit by sub-category
+- Weekly trend charts with average reference lines
+- Dashboard navigation button between dashboards
+
+---
+
+## 🚀 How to Use
+
+1. Download or clone this repository.
+2. Open the `.twbx` file in **Tableau Desktop** or **Tableau Public**.
+3. Select the year you want as the **Current Year** to compare it with the previous year.
+4. Hover over the charts to see details and use the **Customer Dashboard** button to switch to the customer view.
+
+---
+
+## 👤 Author
+
+**Deepak**
+English Language Trainer turned Data Analyst
+
+📫 Connect me through:
+      1.  Phone: +91-7607146249
+      2.  Email: coachdeepaksingh@gmail.com
+
+---
+
+⭐ If you found this project useful, please give it a star!
